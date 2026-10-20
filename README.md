@@ -54,6 +54,12 @@ You need [Claude Code](https://docs.claude.com/en/docs/claude-code) installed.
 
 To run three rounds in a row, use `/swarm 3`.
 
+For a scripted run (`claude -p`), pass the allowed tools on the command line, because a folder Claude Code has not been asked to trust ignores `.claude/settings.json`:
+
+```bash
+claude -p "/swarm" --allowedTools "mcp__pumppill__rh_ignition_calls,mcp__pumppill__rh_new_launches,mcp__pumppill__rh_token_snapshot,mcp__pumppill__rh_swaps,mcp__pumppill__rh_token_safety,mcp__pumppill__pre_trade_check,mcp__pumppill__exit_check,Read,Write,Edit"
+```
+
 ## Change the rules
 
 Every threshold lives in the settings table in `CLAUDE.md`: minimum market cap, liquidity, holders, the top-10 cap, paper size, take-profit, stop, time limit and the cost assumption.
