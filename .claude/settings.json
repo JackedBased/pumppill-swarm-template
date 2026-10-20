@@ -1,0 +1,26 @@
+{
+  "enabledMcpjsonServers": ["pumppill"],
+  "permissions": {
+    "allow": [
+      "mcp__pumppill__rh_ignition_calls",
+      "mcp__pumppill__rh_new_launches",
+      "mcp__pumppill__rh_token_snapshot",
+      "mcp__pumppill__rh_swaps",
+      "mcp__pumppill__rh_token_safety",
+      "mcp__pumppill__pre_trade_check",
+      "mcp__pumppill__exit_check",
+      "Read(./paper/**)",
+      "Edit(./paper/**)",
+      "Write(./paper/**)"
+    ],
+    "deny": [
+      "mcp__pumppill__agent_buy",
+      "mcp__pumppill__agent_sell",
+      "mcp__pumppill__agent_order",
+      "mcp__pumppill__agent_status",
+      "mcp__pumppill__rh_scan_now",
+      "mcp__pumppill__x_chatter",
+      "mcp__pumppill__premium_calls_recent"
+    ]
+  }
+}

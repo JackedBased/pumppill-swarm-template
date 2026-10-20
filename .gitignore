@@ -1,0 +1,5 @@
+# The paper ledger is yours, not the template's.
+paper/*.jsonl
+.env
+.env.*
+.claude/settings.local.json
