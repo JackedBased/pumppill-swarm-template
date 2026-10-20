@@ -29,7 +29,7 @@ You need [Claude Code](https://docs.claude.com/en/docs/claude-code) installed.
 
 1. Get the template.
    ```bash
-   git clone https://github.com/<owner>/pumppill-swarm-template
+   git clone https://github.com/JackedBased/pumppill-swarm-template
    cd pumppill-swarm-template
    ```
 2. Start Claude Code in the folder.
