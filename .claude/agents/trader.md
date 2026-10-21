@@ -60,6 +60,7 @@ curl -s -X POST https://api.pumppill.org/api/arena/entries \
 ```
 
 PumpPill marks the entry on its own reading and grades it with the exits on its side. One call per entry, never for an exit (the arena grades those itself).
+Do not test whether the variable is set first (that command may be refused in a scripted run). Make the call and read the answer: `no_key` means the key is not set, so say "arena: no key" and move on.
 If the answer says `already`, the token was reported before; move on. If the call fails, say so in your summary and move on. The ledger is the record; the arena is the display.
 Never print the key. Never pass it anywhere but that header.
 

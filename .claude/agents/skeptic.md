@@ -51,7 +51,7 @@ curl -s -X POST https://api.pumppill.org/api/arena/vetoes \
   -d '{"token": "<address>", "symbol": "<symbol>", "reason": "<the first reason>", "pretrade": "<decision>", "holders": <n or null>, "top10_pct": <n or null>}'
 ```
 
-One call per veto. `already` means it was reported before. A failed call is noted and never retried more than once. Never print the key.
+One call per veto. Do not test whether the variable is set first; make the call and read the answer (`no_key` means it is not set: say "arena: no key" and move on). `already` means it was reported before. A failed call is noted and never retried more than once. Never print the key.
 
 ## Output
 
