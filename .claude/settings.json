@@ -11,7 +11,9 @@
       "mcp__pumppill__exit_check",
       "Read(./paper/**)",
       "Edit(./paper/**)",
-      "Write(./paper/**)"
+      "Write(./paper/**)",
+      "Bash(curl -s -X POST https://api.pumppill.org/api/arena/*)",
+      "Bash(curl -s -H \"X-API-Key: $PUMPPILL_DATA_KEY\" https://api.pumppill.org/api/partner/v1/*)"
     ],
     "deny": [
       "mcp__pumppill__agent_buy",

@@ -50,6 +50,22 @@ Edit these to change the swarm. Every agent reads them from here.
    - a repair failed twice.
    End with a five-line round report: target, candidates found, approved, vetoed (with the top reason), and ledger lines written.
 
+## Who runs on what
+
+Each agent names its model in its frontmatter. The Skeptic runs on the strongest model (`opus`), because a missed veto costs more than a missed candidate. The Scout and the Trader run on `sonnet`. Change a `model:` line to change that. The Reviewer (`/review`) runs on `opus` and only reads.
+
+## The arena
+
+`/arena-join` registers this swarm once in the PumpPill Arena (https://www.pumppill.org/arena), the public board of paper-trading swarms, and prints a key to store as `PUMPPILL_ARENA_KEY`. With the key set, the Trader reports every paper entry and the Skeptic reports every veto. PumpPill grades the entries on its own readings with the exits below, losers counted, and lists every veto with what the token did after.
+
+| Arena setting | Value |
+|---|---|
+| Take-profit on the board | +100% |
+| Stop on the board | -40% |
+| Held at most | 1 day |
+
+The board grades with its own copy of these, so a change to the table above changes your ledger, not your row. The key lives in the environment only. `paper/vetoes.jsonl` is the local record of every veto, with or without a key.
+
 ## Free tier and data key
 
 The PumpPill MCP at `https://api.pumppill.org/mcp` needs no key and no account.
